@@ -1,0 +1,321 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+header{
+    height: 15%;
+    margin-bottom: 300px;
+    top: -200px;
+    background-color: wheat;
+    position: fixed;
+    width: 100%;
+    animation: 0.5s ease-in-out;
+    z-index: 10;
+   
+}
+body{
+    background-color: black;
+}
+
+ul{
+   
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    margin-top: 20px;
+}
+header a:hover{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    
+}
+header a{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.video{
+    z-index: -100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+   position: relative;
+}
+.video h1{
+    font-size: 60px;
+    color: white;
+    left: 40%;
+    top: 40%;
+    position: absolute;
+}
+.video video{
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    filter: brightness(20%);
+
+}
+.slider{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 20s ease-in-out infinite;
+    background-size: cover;
+}
+@keyframes animate {
+    0%,100%{
+          background-image: url(./images/home/chemise-balzar-white-multi-917308.webp);
+          background-position: center;
+          background-size: cover;
+    }
+    25%{
+        background-image: url(./images/home/dsc02106.webp);
+        background-position: center;
+        background-size: cover;
+ 
+  }
+  50%{
+    background-image: url(./images/home/JMODE_43.jpg);
+    background-position: center;
+    background-size: cover;
+}
+100%{
+    background-image: url(./images/home/veston-reynolds-burgundy-919166_600x.webp);
+    background-position: center;
+    background-size: cover;
+}
+}
+
+#boutique {
+    margin-bottom: 40px;
+    border-top: 2px solid white;
+    color: white;
+    margin-top: 80px;
+}
+#boutique h1{
+    margin-top: 100px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#boutique .card1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#boutique .card2{
+     width: 300px;
+    flex-wrap: wrap;
+    height: 500px ;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    margin-top: 30px;
+}
+#boutique .card2 img{
+    
+    width: 274px;
+    height: 410px;
+    object-fit: cover;
+    transition: 0.4s linear;
+ 
+}
+#boutique h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#boutique .card2:hover img{
+    opacity: 0.5;
+    transform: scale(1.04) ;
+    
+    
+}
+#boutique .card3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#boutique .card4{
+    margin-top: 60px;
+    width: 230px;
+   flex-wrap: wrap;
+   height: 330px ;
+   position: relative;
+   background-color: black;
+   overflow: hidden;
+}
+#boutique .card4 img{
+    width: 230px;
+    height: 330px;
+    object-fit: cover;
+    transition: 0.4s linear;
+    border-radius: 10px;
+}
+#boutique .card4:hover img{
+    opacity: 0.5;
+    transform: scale(1.04) ;
+    
+}
+#boutique .bouton{
+    text-align: center;
+    margin-top: 30px;
+
+}
+#boutique button a{
+    color: white;
+    text-decoration: none;
+}
+#boutique button{
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+#boutique button:hover{
+    background-color: green;
+}
+#collections{
+    border-top: 2px solid white;
+}
+#collections h1{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card5{
+
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card6{
+    margin-top: 30px;
+     position: relative;
+    width: 40%;
+}
+.card6 img{
+    width: 550px;
+    height: 600px;
+    object-fit: cover;
+    
+}
+
+.card6 .txt{
+    text-align: center;
+    width: 80%;
+    opacity: 0;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 40%;
+    font-size: 35px;
+    left: 20%;
+    border-radius: 10px;
+}
+
+.card5 .txt button{
+    padding: 20px;
+    border: none;
+    background-color: red;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    
+
+}
+
+.card5 .txt button a{
+    color: white;
+    text-decoration: none;
+}
+
+.card5 .txt:hover{
+    backdrop-filter: blur(20px);
+    opacity: 1;
+    transition: 0.5s;
+}
+footer{
+    padding: 10px;
+    margin: 120px auto;
+    color: white;
+}
+footer p{
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+   letter-spacing: 2px;
+}
+.txt2{
+    margin-left: 40px;
+
+}
+.txt3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+   margin: 40px 40px;
+   width: 25%;
+   border-bottom: 2px solid white;
+
+}
+.logo a{
+    margin-right: 20px;
+    font-size: 35px;
+    color: white;
+}
+.fa-telegram:hover{
+    color: rgb(10, 132, 184);
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.2);
+    
+}
+.fa-square-instagram:hover{
+    color: rgb(156, 15, 71);
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.2);
+
+}
+.fa-square-x-twitter:hover{
+    color: white;
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.2);
+}
+.fa-facebook:hover{
+    color: rgb(71, 71, 172);
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.2);
+}
+footer li:hover{
+    text-decoration: underline;
+    transition: 0.4s;
+}
+.logo{
+    margin-top: -110px;
+    margin-bottom: 90px;
+    margin-left: 30px;
+}
+.txt3 a{
+    color: white;
+}
+button{
+   cursor: pointer;
+}
+.scrolleven{
+    animation: app 1s ease-in;
+}
