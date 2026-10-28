@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Au Noire — Commander</title>
     <link rel="stylesheet" href="style4.css">
+    <link rel="shortcut icon" href="./Logo_640x360-01.webp">
 </head>
 <body>
     <section>
-            <h1>commender votre article</h1>
-          <form action="commander">
+        <h1>commander votre article</h1>
+        <form action="commander">
             <div class="input-box">
                 <div class="input">
                     <input type="text" placeholder="nom complet" required>
                 </div>
                 <div class="input">
-                    <input type="tel" placeholder="numéro de téléphopne" required>
+                    <input type="tel" placeholder="numéro de téléphone" required>
                 </div>
                 <div class="input">
-                    <input type="email" placeholder="adresse mail" required>
+                    <input type="email" placeholder="adresse e-mail" required>
                 </div>
             </div>
+            
             <div class="option-box">
-                <select name="article" id="article">
-                   <option value="">CHEMISE</option>
-                   <option value="">chaussette</option>
-                   <option value="">DENIMS</option>
-                   <option value="">COSTUMES</option>
-                   <option value="">VESTONS</option>
-                   <option value="">CHEMISES</option>
+                <select name="article" id="article" required>
+                    <option value="" disabled selected>Sélectionnez un article</option>
+                    <option value="chemise">CHEMISE</option>
+                    <option value="chaussette">CHAUSSETTES</option>
+                    <option value="denims">DENIMS ET PANTALONS</option>
+                    <option value="costumes">COSTUMES</option>
+                    <option value="vestons">VESTONS</option>
+                    <option value="polos">POLOS</option>
+                    <option value="maillots">MAILLOTS DE BAIN</option>
                 </select>
             </div>
+            
             <div class="btn-sub">
                 <button type="submit">commander</button>
             </div>
@@ -38,8 +43,7 @@
             <div class="retour">
                 <a href="index.html">retour à la page d'accueil</a>
             </div>
-          </form>
-
+        </form>
     </section>
 </body>
 </html>

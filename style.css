@@ -1,321 +1,755 @@
-html, body{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-}
-header{
-    height: 15%;
-    margin-bottom: 300px;
-    top: -200px;
-    background-color: wheat;
-    position: fixed;
-    width: 100%;
-    animation: 0.5s ease-in-out;
-    z-index: 10;
-   
-}
-body{
-    background-color: black;
+    box-sizing: border-box;
 }
 
-ul{
-   
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 222, 179, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    transition: top 0.4s ease;
+    padding: 0 20px;
+}
+
+.navbar nav ul {
     display: flex;
-    justify-content: space-around;
-}
-li{
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     list-style: none;
-    margin-top: 20px;
+    padding: 18px 0;
 }
-header a:hover{
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    
+
+.navbar nav ul li {
+    list-style: none;
 }
-header a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
+
+header a {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
-.video{
-    z-index: -100;
+
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #0a0a0a;
+    transform: translateY(-1px);
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #1a1a1a;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== NOM DE LA BOUTIQUE (barre mobile) ===== */
+.marque {
+    display: none;
+}
+
+/* ===== HERO VIDEO ===== */
+.video {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-   position: relative;
+    position: relative;
 }
-.video h1{
-    font-size: 60px;
-    color: white;
-    left: 40%;
-    top: 40%;
-    position: absolute;
-}
-.video video{
-    z-index: -100;
-    min-width: 100%;
-    min-height: 100vh;
-    width: 100%;
-    filter: brightness(20%);
 
+.video h1 {
+    font-size: clamp(36px, 6vw, 72px);
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    font-weight: 300;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
-.slider{
-    margin-top: 100px;
+
+.video video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    filter: brightness(25%);
+}
+
+/* ===== SECTION BOUTIQUE ===== */
+#boutique {
+    margin-bottom: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    margin-top: 0;
+    padding: 0 20px;
+}
+
+#boutique h1 {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-size: clamp(28px, 4vw, 45px);
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Product grid - "Magasinez par produit" */
+#boutique .card1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#boutique .card2 {
+    width: 100%;
+    position: relative;
+    background-color: #111;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#boutique .card2 img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+#boutique h2 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 16px 10px;
+    text-transform: uppercase;
+}
+
+#boutique .card2:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+#boutique .card2:hover {
+    transform: translateY(-4px);
+}
+
+/* Nouveautés grid */
+#boutique .card3 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#boutique .card4 {
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    background-color: #111;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#boutique .card4 img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+#boutique .card4:hover img {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+#boutique .card4:hover {
+    transform: translateY(-4px);
+}
+
+/* Buttons */
+#boutique .bouton {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#boutique button {
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: 2px solid #c8a96e;
+    background-color: transparent;
+    color: #c8a96e;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#boutique button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#boutique button:hover {
+    background-color: #c8a96e;
+    color: #0a0a0a;
+}
+
+#boutique button:hover a {
+    color: #0a0a0a;
+}
+
+/* ===== SECTION COLLECTIONS ===== */
+#collections {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 20px;
+}
+
+#collections h1 {
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    font-size: clamp(28px, 4vw, 50px);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.card5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card6 {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card6 img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.card6:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.6);
+}
+
+.card6 .txt {
+    text-align: center;
+    width: 80%;
+    opacity: 0;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.card6:hover .txt {
+    opacity: 1;
+}
+
+.card6 .txt p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.card6 .txt h3 {
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.card5 .txt button {
+    padding: 14px 30px;
+    border: 2px solid #c8a96e;
+    background-color: rgba(200, 169, 110, 0.15);
+    backdrop-filter: blur(10px);
+    width: auto;
+    border-radius: 50px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.card5 .txt button a {
+    color: white;
+    text-decoration: none;
+}
+
+.card5 .txt button:hover {
+    background-color: #c8a96e;
+    color: #0a0a0a;
+}
+
+.card5 .txt button:hover a {
+    color: #0a0a0a;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+    margin-top: 80px;
+    width: 100%;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: animate 20s ease-in-out infinite;
     background-size: cover;
+    border-radius: 0;
 }
+
 @keyframes animate {
-    0%,100%{
-          background-image: url(./images/home/chemise-balzar-white-multi-917308.webp);
-          background-position: center;
-          background-size: cover;
+    0%, 100% {
+        background-image: url(./images/home/chemise-balzar-white-multi-917308.webp);
+        background-position: center;
+        background-size: cover;
     }
-    25%{
+    25% {
         background-image: url(./images/home/dsc02106.webp);
         background-position: center;
         background-size: cover;
- 
-  }
-  50%{
-    background-image: url(./images/home/JMODE_43.jpg);
-    background-position: center;
-    background-size: cover;
-}
-100%{
-    background-image: url(./images/home/veston-reynolds-burgundy-919166_600x.webp);
-    background-position: center;
-    background-size: cover;
-}
+    }
+    50% {
+        background-image: url(./images/home/JMODE_43.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    75% {
+        background-image: url(./images/home/veston-reynolds-burgundy-919166_600x.webp);
+        background-position: center;
+        background-size: cover;
+    }
 }
 
-#boutique {
-    margin-bottom: 40px;
-    border-top: 2px solid white;
-    color: white;
-    margin-top: 80px;
+.image-container {
+    display: none;
 }
-#boutique h1{
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 60px 40px 40px;
     margin-top: 100px;
-    font-size: 45px;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
-#boutique .card1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-#boutique .card2{
-     width: 300px;
-    flex-wrap: wrap;
-    height: 500px ;
-    position: relative;
-    background-color: black;
-    overflow: hidden;
-    margin-top: 30px;
-}
-#boutique .card2 img{
-    
-    width: 274px;
-    height: 410px;
-    object-fit: cover;
-    transition: 0.4s linear;
- 
-}
-#boutique h2{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#boutique .card2:hover img{
-    opacity: 0.5;
-    transform: scale(1.04) ;
-    
-    
-}
-#boutique .card3{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-#boutique .card4{
-    margin-top: 60px;
-    width: 230px;
-   flex-wrap: wrap;
-   height: 330px ;
-   position: relative;
-   background-color: black;
-   overflow: hidden;
-}
-#boutique .card4 img{
-    width: 230px;
-    height: 330px;
-    object-fit: cover;
-    transition: 0.4s linear;
-    border-radius: 10px;
-}
-#boutique .card4:hover img{
-    opacity: 0.5;
-    transform: scale(1.04) ;
-    
-}
-#boutique .bouton{
-    text-align: center;
-    margin-top: 30px;
 
-}
-#boutique button a{
-    color: white;
-    text-decoration: none;
-}
-#boutique button{
-    padding: 20px 30px;
-    border-radius: 8px;
-    border: none;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+footer p {
     text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
 }
-#boutique button:hover{
-    background-color: green;
-}
-#collections{
-    border-top: 2px solid white;
-}
-#collections h1{
-    color: white;
-    text-align: center;
-    margin-top: 100px;
-    font-size: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.card5{
 
-    margin-top: 200px;
+.logo {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.logo a {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.logo a:hover {
+    background: none;
+    padding: 0;
+    transform: none;
+}
+
+.fa-telegram:hover {
+    color: #0088cc;
+    transform: scale(1.2);
+}
+
+.fa-square-instagram:hover {
+    color: #e1306c;
+    transform: scale(1.2);
+}
+
+.fa-square-x-twitter:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+.fa-facebook:hover {
+    color: #4267B2;
+    transform: scale(1.2);
+}
+
+.txt2 {
+    margin-bottom: 30px;
+}
+
+.txt2 h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.txt3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+.txt3 a {
+    color: #c8a96e;
+    transition: color 0.3s ease;
+}
+
+.txt3 a:hover {
+    color: #e0c98f;
+    background: none;
+    padding: 0;
+}
+
+.txt4 ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card6{
-    margin-top: 30px;
-     position: relative;
-    width: 40%;
-}
-.card6 img{
-    width: 550px;
-    height: 600px;
-    object-fit: cover;
-    
+    gap: 30px;
+    list-style: none;
 }
 
-.card6 .txt{
-    text-align: center;
-    width: 80%;
-    opacity: 0;
-    position: absolute;
-    color: rgb(255, 255, 255);
-    top: 40%;
-    font-size: 35px;
-    left: 20%;
-    border-radius: 10px;
+.txt4 li {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    list-style: none;
 }
 
-.card5 .txt button{
-    padding: 20px;
-    border: none;
-    background-color: red;
-    width: 100%;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    
-
-}
-
-.card5 .txt button a{
-    color: white;
+footer li:hover {
     text-decoration: none;
+    color: #c8a96e;
 }
 
-.card5 .txt:hover{
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    transition: 0.5s;
+button {
+    cursor: pointer;
 }
-footer{
-    padding: 10px;
-    margin: 120px auto;
-    color: white;
-}
-footer p{
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-   letter-spacing: 2px;
-}
-.txt2{
-    margin-left: 40px;
 
+/* Ensure footer links don't get header hover styles */
+footer a:hover {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
 }
-.txt3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-   margin: 40px 40px;
-   width: 25%;
-   border-bottom: 2px solid white;
 
-}
-.logo a{
-    margin-right: 20px;
-    font-size: 35px;
-    color: white;
-}
-.fa-telegram:hover{
-    color: rgb(10, 132, 184);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-    
-}
-.fa-square-instagram:hover{
-    color: rgb(156, 15, 71);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-
-}
-.fa-square-x-twitter:hover{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-.fa-facebook:hover{
-    color: rgb(71, 71, 172);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-footer li:hover{
-    text-decoration: underline;
-    transition: 0.4s;
-}
-.logo{
-    margin-top: -110px;
-    margin-bottom: 90px;
-    margin-left: 30px;
-}
-.txt3 a{
-    color: white;
-}
-button{
-   cursor: pointer;
-}
-.scrolleven{
+.scrolleven {
     animation: app 1s ease-in;
+}
+
+/* ========================================
+   RESPONSIVE — Tablette (max-width: 1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    #boutique .card1 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #boutique .card3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .card5 {
+        gap: 20px;
+    }
+
+    .card6 img {
+        height: 400px;
+    }
+
+    .slider {
+        height: 350px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE — Petit écran (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+
+    .marque {
+        display: inline-block;
+        padding: 4px 0;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 6px;
+    }
+    .marque:hover {
+        background: none;
+        transform: none;
+    }
+    /* Hamburger visible */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header {
+        padding: 12px 20px;
+    }
+
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(245, 222, 179, 0.98);
+        backdrop-filter: blur(20px);
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        z-index: 150;
+    }
+
+    .navbar nav ul.active {
+        display: flex;
+    }
+
+    header a {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Boutique */
+    #boutique h1 {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    #boutique .card1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    #boutique .card2 img {
+        height: 280px;
+    }
+
+    #boutique .card3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    #boutique .card4 img {
+        height: 220px;
+    }
+
+    /* Collections */
+    .card5 {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .card6 img {
+        height: 350px;
+    }
+
+    .card6 .txt {
+        width: 90%;
+    }
+
+    /* Slider */
+    .slider {
+        height: 280px;
+        margin-top: 50px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 20px;
+    }
+
+    .txt4 ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE — Mobile (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .video {
+        height: 70svh;
+    }
+
+    #boutique .card1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    #boutique .card2 img {
+        height: 210px;
+    }
+
+    #boutique .card3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #boutique .card4 img {
+        height: 180px;
+    }
+
+    #boutique h2 {
+        font-size: 11px;
+    }
+
+    .card5 {
+        padding: 0 15px;
+    }
+
+    .card6 img {
+        height: 280px;
+    }
+
+    .card6 .txt h3 {
+        font-size: 16px;
+    }
+
+    .card5 .txt button {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+
+    .slider {
+        height: 200px;
+    }
+
+    footer {
+        padding: 30px 15px;
+        margin-top: 60px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .txt2 h2 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }

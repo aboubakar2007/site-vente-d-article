@@ -1,375 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Au Noire — Chaussettes</title>
+    <meta name="description" content="Découvrez notre collection de chaussettes Au Noire.">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body{
-            background-color: black;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-    height: 15%;
-    margin-bottom: 300px;
-    top: -200px;
-    background-color: wheat;
-    position: fixed;
-    width: 100%;
-    animation: 0.5s ease-in-out;
-    z-index: 10;
-   
-}
-
-ul{
-   
-   display: flex;
-   justify-content: space-around;
-}
-li{
-    list-style: none;
-    margin-top: 20px;
-}
-
-header a:hover{
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-}
-header a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-.image img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
-.image p{
-    font-weight: 1000;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    color: rgb(255, 255, 255);
-    font-size: 60px;
-    text-transform: uppercase;
-}
-.card1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card2{
-     width: 300px;
-    flex-wrap: wrap;
-    height: 500px ;
-    position: relative;
-
-    overflow: hidden;
-}
-.card2 img{
-    width: 274px;
-    height: 410px;
-    object-fit: cover;
-    transition: 0.4s linear;
-}
-.card2 p{
-    text-align: center;
-    color: white;
-}
-.card2 button{
-    text-align: center;
-    margin-left: 118px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-.card2{
-    margin-top: 60px;
-}
-.card2 img:hover{
-    transform: scale(0.9);
-    transition: 0.4s;
-}
-.card2 button:hover{
-    transform: scale(1.1);
-    background-color: rgb(96, 96, 56);
-    border: none;
-}
-footer{
-    border-top: 2px solid white ;
-    padding: 10px;
-    margin: 120px auto;
-    color: white;
-}
-footer p{
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-   letter-spacing: 2px;
-}
-.txt2{
-    margin-left: 40px;
-
-}
-.txt3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-   margin: 40px 40px;
-   width: 25%;
-   border-bottom: 2px solid white;
-
-}
-.logo a{
-    margin-right: 20px;
-    font-size: 35px;
-    color: white;
-}
-.fa-telegram:hover{
-    color: rgb(10, 132, 184);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-    
-}
-.fa-square-instagram:hover{
-    color: rgb(156, 15, 71);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-
-}
-.fa-square-x-twitter:hover{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-.fa-facebook:hover{
-    color: rgb(71, 71, 172);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-footer li:hover{
-    text-decoration: underline;
-    transition: 0.4s;
-}
-.logo{
-    margin-top: 0px;
-    margin-bottom: 90px;
-    margin-left: 30px;
-}
-.txt3 a{
-    color: white;
-}
-button{
-    cursor: pointer;
-}
-    </style>
+    <link rel="shortcut icon" href="./Logo_640x360-01.webp">
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
-                <ul>
+                <a href="index.html" class="marque">Au Noire</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-menu">
                     <li><a href="index.html">accueil</a></li>
                     <li><a href="index.html#boutique">boutique</a></li>
-                    <li><a href="#collections">nos collections</a></li>
+                    <li><a href="index.html#collections">nos collections</a></li>
                     <li><a href="contact.html">contact</a></li>
-                    <li><a href="formulaire.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="formulaire2.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="image">
-        <img src="./images/collection/chassette/medium_landscape_268623.webp" alt="">
+        <img src="./images/collection/chassette/medium_landscape_268623.webp" alt="Chaussettes">
         <p>chaussettes</p>
     </div>
-     <section>
 
-        <di class="card1">
-          
-        
+    <section>
+        <div class="card1">
             <div class="card2">
-                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-117480_600x.webp" alt="">
-                <p>1000F</p>
+                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-117480_600x.webp" alt="Chaussettes 1">
+                <p>1.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-372251_600x.webp" alt="">
-                <p>1000F</p>
+                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-372251_600x.webp" alt="Chaussettes 2">
+                <p>1.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-423235_600x.webp" alt="">
-                <p>1000F</p>
+                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-423235_600x.webp" alt="Chaussettes 3">
+                <p>1.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-527307_600x.webp" alt="">
-                <p>1000F</p>
+                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-527307_600x.webp" alt="Chaussettes 4">
+                <p>1.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-823022_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-851820_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-857269_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-859049_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-118169_600x.webp" alt="">
-                <p>1000F</p>
-                <button>acheter</button>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-136776_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-167798_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-208879_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-369590_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-432937_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-469484_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-521288_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-561011_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-570789_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-639952_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-651603_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-736527_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-775263_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-787249_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-781391_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-795668_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-851864_600x.webp" alt="">
-                <p>80.000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-863049_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-884043_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-890857_600x.webp" alt="">
-                <p>1000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-981732_600x.webp" alt="">
-                <p>1000F</p>
+                <img src="./images/collection/chassette//3-paires-chausettes-pour-homme-823022_600x.webp" alt="Chaussettes 5">
+                <p>1.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
+            <div class="card2">
+                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-851820_600x.webp" alt="Chaussettes 6">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
-           
+            <div class="card2">
+                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-857269_600x.webp" alt="Chaussettes 7">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
-          
+            <div class="card2">
+                <img src="./images/collection/chassette/3-paires-chausettes-pour-homme-859049_600x.webp" alt="Chaussettes 8">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-118169_600x.webp" alt="Bas Coton 1">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-136776_600x.webp" alt="Bas Coton 2">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-167798_600x.webp" alt="Bas Coton 3">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-208879_600x.webp" alt="Bas Coton 4">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-369590_600x.webp" alt="Bas Coton 5">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-432937_600x.webp" alt="Bas Coton 6">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-469484_600x.webp" alt="Bas Coton 7">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-521288_600x.webp" alt="Bas Coton 8">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-561011_600x.webp" alt="Bas Coton 9">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-570789_600x.webp" alt="Bas Coton 10">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-639952_600x.webp" alt="Bas Coton 11">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-651603_600x.webp" alt="Bas Coton 12">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-736527_600x.webp" alt="Bas Coton 13">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-775263_600x.webp" alt="Bas Coton 14">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-787249_600x.webp" alt="Bas Coton 15">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-781391_600x.webp" alt="Bas Coton 16">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-795668_600x.webp" alt="Bas Coton 17">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-851864_600x.webp" alt="Bas Coton 18">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-863049_600x.webp" alt="Bas Coton 19">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-884043_600x.webp" alt="Bas Coton 20">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-890857_600x.webp" alt="Bas Coton 21">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/chassette/paire-de-bas-pour-homme-en-coton-mercerise-981732_600x.webp" alt="Bas Coton 22">
+                <p>1.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
         </div>
-     </section>
+    </section>
 
-
-     <footer>
+    <footer>
         <div class="logo">
             <a href=""><i class="fa-brands fa-telegram"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100082044739147&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
-    
+
         <div class="txt2">
             <h2>Inscrivez-vous et économisez</h2>
-            <p>Soyez le premier à connaître nos nouveautés et <br> meilleures offres. Nous n'enverrons pas plus de 2 <br> courriels par mois.</p>
+            <p>Soyez le premier à connaître nos nouveautés et meilleures offres. Nous n'enverrons pas plus de 2 courriels par mois.</p>
         </div>
         <div class="txt3">
             <h3>Inscrivez-vous à un compte <a href="formulaire.html"><i class="fa-solid fa-user"></i></a></h3>
@@ -383,7 +242,7 @@ button{
                 <li>BLOG</li>
             </ul>
         </div>
-      </footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>

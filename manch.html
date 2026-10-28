@@ -1,332 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Au Noire — Manches courtes et Polos</title>
+    <meta name="description" content="Collection manches courtes et polos Au Noire. Découvrez nos modèles exclusifs.">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body{
-            background-color: black;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-    height: 15%;
-    margin-bottom: 300px;
-    top: -200px;
-    background-color: wheat;
-    position: fixed;
-    width: 100%;
-    animation: 0.5s ease-in-out;
-    z-index: 10;
-   
-}
-
-ul{
-   
-   display: flex;
-   justify-content: space-around;
-}
-li{
-    list-style: none;
-    margin-top: 20px;
-}
-
-header a:hover{
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-}
-header a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-.image img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
-.image p{
-    font-weight: 1000;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    color: rgb(0, 0, 0);
-    font-size: 60px;
-    text-transform: uppercase;
-}
-.card1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card2{
-     width: 300px;
-    flex-wrap: wrap;
-    height: 500px ;
-    position: relative;
-
-    overflow: hidden;
-}
-.card2 img{
-    width: 274px;
-    height: 410px;
-    object-fit: cover;
-    transition: 0.4s linear;
-}
-.card2 p{
-    text-align: center;
-    color: white;
-}
-.card2 button{
-    text-align: center;
-    margin-left: 118px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-.card2{
-    margin-top: 60px;
-}
-.card2 img:hover{
-    transform: scale(0.9);
-    transition: 0.4s;
-}
-.card2 button:hover{
-    transform: scale(1.1);
-    background-color: rgb(96, 96, 56);
-    border: none;
-}
-footer{
-    border-top: 2px solid white ;
-    padding: 10px;
-    margin: 120px auto;
-    color: white;
-}
-footer p{
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-   letter-spacing: 2px;
-}
-.txt2{
-    margin-left: 40px;
-
-}
-.txt3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-   margin: 40px 40px;
-   width: 25%;
-   border-bottom: 2px solid white;
-
-}
-.logo a{
-    margin-right: 20px;
-    font-size: 35px;
-    color: white;
-}
-.fa-telegram:hover{
-    color: rgb(10, 132, 184);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-    
-}
-.fa-square-instagram:hover{
-    color: rgb(156, 15, 71);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-
-}
-.fa-square-x-twitter:hover{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-.fa-facebook:hover{
-    color: rgb(71, 71, 172);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-footer li:hover{
-    text-decoration: underline;
-    transition: 0.4s;
-}
-.logo{
-    margin-bottom: 90px;
-    margin-left: 30px;
-}
-.txt3 a{
-    color: white;
-}
-button{
-    cursor: pointer;
-}
-    </style>
+    <link rel="shortcut icon" href="./Logo_640x360-01.webp">
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
-                <ul>
+                <a href="index.html" class="marque">Au Noire</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-menu">
                     <li><a href="index.html">accueil</a></li>
                     <li><a href="index.html#boutique">boutique</a></li>
-                    <li><a href="#collections">nos collections</a></li>
+                    <li><a href="index.html#collections">nos collections</a></li>
                     <li><a href="contact.html">contact</a></li>
                     <li><a href="formulaire2.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="image">
-        <img src="./images/collection/manche-courte/manches-courtes-suarez-white-beige-460917_600x.webp" alt="">
+        <img src="./images/collection/manche-courte/manches-courtes-suarez-white-beige-460917_600x.webp" alt="Manches courtes et polos">
         <p>manches courtes et polos</p>
     </div>
-     <section>
 
-        <di class="card1">
+    <section>
+        <div class="card1">
             <div class="card2">
-                <img src="./images/collection/manche-courte/manches-courtes-extensible-melloni-navy-495751_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/manches-courtes-extensible-melloni-navy-495751_600x.webp" alt="Melloni Navy">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/manches-courtes-spiro-navy-932146_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/manches-courtes-spiro-navy-932146_600x.webp" alt="Spiro Navy">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/manches-courtes-suarez-white-beige-460917_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/manches-courtes-suarez-white-beige-460917_600x.webp" alt="Suarez White Beige">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-amazonia-turquoise-115612_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-amazonia-turquoise-115612_600x.webp" alt="Polo Amazonia">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-aquador-black-352085_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-aquador-black-352085_600x.webp" alt="Polo Aquador Black">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-aquador-white-627139_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-aquador-white-627139_600x.webp" alt="Polo Aquador White">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-auriol-light-blue-544512_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-auriol-light-blue-544512_600x.webp" alt="Polo Auriol">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-azimut-navy-orange-784272_600x.webp" alt="">
-                <p>80.000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-
-
-            <div class="card2">
-                <img src="./images/collection/manche-courte/polo-eagle-fuchsia-108160_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-azimut-navy-orange-784272_600x.webp" alt="Polo Azimut">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-eagle-light-blue-368588_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-eagle-fuchsia-108160_600x.webp" alt="Polo Eagle Fuchsia">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-ezra-tobacco-290286_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-eagle-light-blue-368588_600x.webp" alt="Polo Eagle Blue">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-fioravante-indigo-567718_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-ezra-tobacco-290286_600x.webp" alt="Polo Ezra">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-homme-manches-courtes-cap-kb-mpo22.png" alt="">
+                <img src="./images/collection/manche-courte/polo-fioravante-indigo-567718_600x.webp" alt="Polo Fioravante">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-manches-longues-federico-blue-334440_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-homme-manches-courtes-cap-kb-mpo22.png" alt="Polo Homme">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-mercury-black-502050_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-manches-longues-federico-blue-334440_600x.webp" alt="Polo Federico">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-molokai-red-411305_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-mercury-black-502050_600x.webp" alt="Polo Mercury">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-molokai-white-black-120879_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-molokai-red-411305_600x.webp" alt="Polo Molokai Red">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-molokai-white-orange-235987_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-molokai-white-black-120879_600x.webp" alt="Polo Molokai White Black">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/polo-roma-white-navy-682519_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-molokai-white-orange-235987_600x.webp" alt="Polo Molokai White Orange">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/manche-courte/manches-courtes-spiro-navy-932146_600x.webp" alt="">
+                <img src="./images/collection/manche-courte/polo-roma-white-navy-682519_600x.webp" alt="Polo Roma">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
+            <div class="card2">
+                <img src="./images/collection/manche-courte/manches-courtes-spiro-navy-932146_600x.webp" alt="Spiro Navy">
+                <p>80.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
         </div>
-     </section>
+    </section>
 
-     <footer>
+    <footer>
         <div class="logo">
             <a href=""><i class="fa-brands fa-telegram"></i></a>
-            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-square-instagram"></i></i></a>
+            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-square-instagram"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100082044739147&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
-    
+
         <div class="txt2">
             <h2>Inscrivez-vous et économisez</h2>
-            <p>Soyez le premier à connaître nos nouveautés et <br> meilleures offres. Nous n'enverrons pas plus de 2 <br> courriels par mois.</p>
+            <p>Soyez le premier à connaître nos nouveautés et meilleures offres. Nous n'enverrons pas plus de 2 courriels par mois.</p>
         </div>
         <div class="txt3">
             <h3>Inscrivez-vous à un compte <a href="formulaire.html"><i class="fa-solid fa-user"></i></a></h3>
@@ -340,8 +181,7 @@ button{
                 <li>BLOG</li>
             </ul>
         </div>
-      </footer>
-
+    </footer>
 
     <script src="script.js"></script>
 </body>

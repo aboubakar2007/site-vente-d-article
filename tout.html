@@ -3,372 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Au Noire — Tous les articles</title>
+    <meta name="description" content="Découvrez tous nos articles exclusifs — chemises, vestons, polos et plus.">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        footer{
-            border-top: 2px solid white;
-    padding: 10px;
-    margin: 120px auto;
-    color: white;
-}
-button{
-    cursor: pointer;
-}
-footer p{
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-   letter-spacing: 2px;
-}
-.txt2{
-    margin-left: 40px;
-
-}
-.txt3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-   margin: 40px 40px;
-   width: 25%;
-   border-bottom: 2px solid white;
-
-}
-.logo a{
-    margin-right: 20px;
-    font-size: 35px;
-    color: white;
-}
-.fa-telegram:hover{
-    color: rgb(10, 132, 184);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-    
-}
-.fa-square-instagram:hover{
-    color: rgb(156, 15, 71);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-
-}
-.fa-square-x-twitter:hover{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-.fa-facebook:hover{
-    color: rgb(71, 71, 172);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-footer li:hover{
-    text-decoration: underline;
-    transition: 0.4s;
-}
-.logo{
-
-    margin-bottom: 90px;
-    margin-left: 30px;
-}
-.txt3 a{
-    color: white;
-}
-        body{
-            background-color: black;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-    height: 15%;
-    margin-bottom: 300px;
-    top: -200px;
-    background-color: wheat;
-    position: fixed;
-    width: 100%;
-    animation: 0.5s ease-in-out;
-    z-index: 10;
-   
-}
-
-ul{
-   
-   display: flex;
-   justify-content: space-around;
-}
-li{
-    list-style: none;
-    margin-top: 20px;
-}
-
-header a:hover{
-
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-}
-header a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-.image img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
-.image p{
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    color: white;
-    font-size: 60px;
-    text-transform: uppercase;
-}
-.card1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card2{
-     width: 300px;
-    flex-wrap: wrap;
-    height: 500px ;
-    position: relative;
-
-    overflow: hidden;
-}
-.card2 img{
-    width: 274px;
-    height: 410px;
-    object-fit: cover;
-    transition: 0.4s linear;
-}
-.card2 p{
-    text-align: center;
-    color: white;
-}
-.card2 button{
-    text-align: center;
-    margin-left: 118px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-.card2{
-    margin-top: 60px;
-}
-    </style>
+    <link rel="shortcut icon" href="./Logo_640x360-01.webp">
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
-                <ul>
+                <a href="index.html" class="marque">Au Noire</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-menu">
                     <li><a href="index.html">accueil</a></li>
                     <li><a href="index.html#boutique">boutique</a></li>
-                    <li><a href="#collections">nos collections</a></li>
+                    <li><a href="index.html#collections">nos collections</a></li>
                     <li><a href="contact.html">contact</a></li>
                     <li><a href="formulaire.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="image">
-        <img src="./images/chemise-wolverin-jacquard-black-765817.webp" alt="">
+        <img src="./images/chemise-wolverin-jacquard-black-765817.webp" alt="Nos articles exclusifs">
         <p>nos articles exclusifs</p>
     </div>
-     <section>
 
+    <section>
         <div class="card1">
             <div class="card2">
-                <img src="./images/produits/nouveau/blazer-leonardo-black-indigo-844715_600x.webp" alt="">
-                <p>80.000F</p>
-                <a href=""><button>acheter</button></a>
-            </div>
-
-            <div class="card2">
-                <img src="./images/produits/nouveau/blazer-walken-med-grey-756970_600x.webp" alt="">
+                <img src="./images/produits/nouveau/blazer-leonardo-black-indigo-844715_600x.webp" alt="Blazer Leonardo">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-aberdeen-rust-409347_600x.webp" alt="">
+                <img src="./images/produits/nouveau/blazer-walken-med-grey-756970_600x.webp" alt="Blazer Walken">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-ace-navy-tobacco-798558_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-aberdeen-rust-409347_600x.webp" alt="Chemise Aberdeen">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-avalon-lavender-450411_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-ace-navy-tobacco-798558_600x.webp" alt="Chemise Ace">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-magnani-white-824087_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-avalon-lavender-450411_600x.webp" alt="Chemise Avalon">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-mirabeau-light-blue-788030_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-magnani-white-824087_600x.webp" alt="Chemise Magnani">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/chemise-stapelton-denim-736867_600x.webp" alt="">
-                <p>80.000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-
-
-            <div class="card2">
-                <img src="./images/produits/nouveau/manches-courtes-axel-white-black-920032_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-mirabeau-light-blue-788030_600x.webp" alt="Chemise Mirabeau">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/manches-courtes-spiro-navy-932146_600x.webp" alt="">
+                <img src="./images/produits/nouveau/chemise-stapelton-denim-736867_600x.webp" alt="Chemise Stapelton">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/polo-amazonia-turquoise-115612_600x.webp" alt="">
+                <img src="./images/produits/nouveau/manches-courtes-axel-white-black-920032_600x.webp" alt="Manches courtes Axel">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/SEVILLA_black_0564copy_600x.jpg" alt="">
+                <img src="./images/produits/nouveau/manches-courtes-spiro-navy-932146_600x.webp" alt="Manches courtes Spiro">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-anderson-black-123753_600x.webp" alt="">
+                <img src="./images/produits/nouveau/polo-amazonia-turquoise-115612_600x.webp" alt="Polo Amazonia">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-anderson-midnight-901618_600x.webp" alt="">
+                <img src="./images/produits/nouveau/SEVILLA_black_0564copy_600x.jpg" alt="Sevilla Black">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-bale-navy-199386_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-anderson-black-123753_600x.webp" alt="Veston Anderson Black">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-century-plaid-navy-616192_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-anderson-midnight-901618_600x.webp" alt="Veston Anderson Midnight">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-farrell-plum-336052_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-bale-navy-199386_600x.webp" alt="Veston Bale">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-farrell-rust-319021_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-century-plaid-navy-616192_600x.webp" alt="Veston Century">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-filoni-midnight-275742_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-farrell-plum-336052_600x.webp" alt="Veston Farrell Plum">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-giacomo-black-126022_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-farrell-rust-319021_600x.webp" alt="Veston Farrell Rust">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-giacomo-stone-302202_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-filoni-midnight-275742_600x.webp" alt="Veston Filoni">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-hoffman-denim-810241_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-giacomo-black-126022_600x.webp" alt="Veston Giacomo Black">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-huston-navy-674960_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-giacomo-stone-302202_600x.webp" alt="Veston Giacomo Stone">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-jackman-cranberry-475990_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-hoffman-denim-810241_600x.webp" alt="Veston Hoffman">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/nouveau/veston-lancaster-petrol-111689_600x.webp" alt="">
+                <img src="./images/produits/nouveau/veston-huston-navy-674960_600x.webp" alt="Veston Huston">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/vestons-620658.webp" alt="">
+                <img src="./images/produits/nouveau/veston-jackman-cranberry-475990_600x.webp" alt="Veston Jackman">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/produits/polos-931977.webp" alt="">
+                <img src="./images/produits/nouveau/veston-lancaster-petrol-111689_600x.webp" alt="Veston Lancaster">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
-
 
             <div class="card2">
-                <img src="./images/home/chemise-bardelli-black-456864.webp" alt="">
+                <img src="./images/produits/vestons-620658.webp" alt="Vestons">
                 <p>80.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
+            <div class="card2">
+                <img src="./images/produits/polos-931977.webp" alt="Polos">
+                <p>80.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
+            <div class="card2">
+                <img src="./images/home/chemise-bardelli-black-456864.webp" alt="Chemise Bardelli">
+                <p>80.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
         </div>
-     </section>
+    </section>
 
-     <footer>   
+    <footer>
         <div class="logo">
-            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-telegram"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-square-instagram"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100082044739147&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
-    
+
         <div class="txt2">
             <h2>Inscrivez-vous et économisez</h2>
-            <p>Soyez le premier à connaître nos nouveautés et <br> meilleures offres. Nous n'enverrons pas plus de 2 <br> courriels par mois.</p>
+            <p>Soyez le premier à connaître nos nouveautés et meilleures offres. Nous n'enverrons pas plus de 2 courriels par mois.</p>
         </div>
         <div class="txt3">
             <h3>Inscrivez-vous à un compte <a href="formulaire.html"><i class="fa-solid fa-user"></i></a></h3>
@@ -382,8 +229,7 @@ header a{
                 <li>BLOG</li>
             </ul>
         </div>
-      </footer>
-
+    </footer>
 
     <script src="script.js"></script>
 </body>

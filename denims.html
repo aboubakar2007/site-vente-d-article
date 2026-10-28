@@ -1,285 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Au Noire — Denims et Pantalons</title>
+    <meta name="description" content="Collection denims et pantalons extensibles 360° Au Noire.">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body{
-            background-color: black;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-    height: 15%;
-    margin-bottom: 300px;
-    top: -200px;
-    background-color: wheat;
-    position: fixed;
-    width: 100%;
-    animation: 0.5s ease-in-out;
-    z-index: 10;
-   
-}
-
-ul{
-   
-   display: flex;
-   justify-content: space-around;
-}
-li{
-    list-style: none;
-    margin-top: 20px;
-}
-
-header a:hover{
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-   
-}
-header a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-.image img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
-.image p{
-    font-weight: 1000;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    color: rgb(255, 255, 255);
-    font-size: 60px;
-    text-transform: uppercase;
-}
-.card1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.card2{
-     width: 300px;
-    flex-wrap: wrap;
-    height: 500px ;
-    position: relative;
-
-    overflow: hidden;
-}
-.card2 img{
-    width: 274px;
-    height: 410px;
-    object-fit: cover;
-    transition: 0.4s linear;
-}
-.card2 p{
-    text-align: center;
-    color: white;
-}
-.card2 button{
-    text-align: center;
-    margin-left: 118px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-.card2 img:hover{
-    transform: scale(0.9);
-    transition: 0.4s;
-}
-.card2 button:hover{
-    transform: scale(1.1);
-    background-color: rgb(96, 96, 56);
-    border: none;
-}
-.card2{
-    margin-top: 60px;
-}
-footer{
-    border-top: 2px solid white ;
-    padding: 10px;
-    margin: 120px auto;
-    color: white;
-}
-footer p{
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-   letter-spacing: 2px;
-}
-.txt2{
-    margin-left: 40px;
-
-}
-.txt3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-   margin: 40px 40px;
-   width: 25%;
-   border-bottom: 2px solid white;
-
-}
-.logo a{
-    margin-right: 20px;
-    font-size: 35px;
-    color: white;
-}
-.fa-telegram:hover{
-    color: rgb(10, 132, 184);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-    
-}
-.fa-square-instagram:hover{
-    color: rgb(156, 15, 71);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-
-}
-.fa-square-x-twitter:hover{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-.fa-facebook:hover{
-    color: rgb(71, 71, 172);
-    transition: 0.5s;
-    transform: rotate(360deg) scale(1.2);
-}
-footer li:hover{
-    text-decoration: underline;
-    transition: 0.4s;
-}
-.logo{
-    margin-bottom: 90px;
-    margin-left: 30px;
-}
-.txt3 a{
-    color: white;
-}
-button{
-    cursor: pointer;
-}
-    </style>
+    <link rel="shortcut icon" href="./Logo_640x360-01.webp">
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
-                <ul>
+                <a href="index.html" class="marque">Au Noire</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-menu">
                     <li><a href="index.html">accueil</a></li>
                     <li><a href="index.html#boutique">boutique</a></li>
-                    <li><a href="#collections">nos collections</a></li>
+                    <li><a href="index.html#collections">nos collections</a></li>
                     <li><a href="contact.html">contact</a></li>
                     <li><a href="formulaire2.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="image">
-        <img src="./images/collection/denism/premium_photo-1674828601362-afb73c907ebe.jpg" alt="">
+        <img src="./images/collection/denism/premium_photo-1674828601362-afb73c907ebe.jpg" alt="Denims et pantalons">
         <p>denims et pantalons</p>
     </div>
-     <section>
 
-        <di class="card1">
-          
-        
+    <section>
+        <div class="card1">
             <div class="card2">
-                <img src="./images/collection/denism/dressy-stretch-pant-winchester-black-344074.jpg" alt="">
-                <p>8000F</p>
+                <img src="./images/collection/denism/dressy-stretch-pant-winchester-black-344074.jpg" alt="Winchester Black">
+                <p>8.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/denism/dressy-stretch-pant-winchester-wine-279098.jpg" alt="">
-                <p>8000F</p>
+                <img src="./images/collection/denism/dressy-stretch-pant-winchester-wine-279098.jpg" alt="Winchester Wine">
+                <p>8.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/denism/jeans-johnny-skd-dark-gotham-558450.jpg" alt="">
-                <p>8000F</p>
+                <img src="./images/collection/denism/jeans-johnny-skd-dark-gotham-558450.jpg" alt="Jeans Johnny Dark">
+                <p>8.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/denism/jeans-johnny-skd-light-milano-848070.webp" alt="">
-                <p>8000F</p>
+                <img src="./images/collection/denism/jeans-johnny-skd-light-milano-848070.webp" alt="Jeans Johnny Light">
+                <p>8.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
 
             <div class="card2">
-                <img src="./images/collection/denism/magnum-ryan-black-910260.jpg" alt="">
-                <p>8000F</p>
+                <img src="./images/collection/denism/magnum-ryan-black-910260.jpg" alt="Magnum Ryan Black">
+                <p>8.000F</p>
                 <a href="commende.html"><button>acheter</button></a>
             </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-johnny-skc-tobacco-441566.webp" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-wesson-lancaster-cobalt-914659.webp" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-wesson-lancaster-lavender-119694.webp" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-winchester-hopkins-navy-890866.jpg" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-wesson-lancaster-turquoise-848222.webp" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/pantalon-winchester-hopkins-navy-890866.jpg" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            <div class="card2">
-                <img src="./images/collection/denism/wesson-craig-green-257830.jpg" alt="">
-                <p>8000F</p>
-                <a href="commende.html"><button>acheter</button></a>
-            </div>
-            
 
+            <div class="card2">
+                <img src="./images/collection/denism/pantalon-johnny-skc-tobacco-441566.webp" alt="Pantalon Johnny Tobacco">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
-           
+            <div class="card2">
+                <img src="./images/collection/denism/pantalon-wesson-lancaster-cobalt-914659.webp" alt="Pantalon Wesson Cobalt">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
-          
+            <div class="card2">
+                <img src="./images/collection/denism/pantalon-wesson-lancaster-lavender-119694.webp" alt="Pantalon Wesson Lavender">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
 
+            <div class="card2">
+                <img src="./images/collection/denism/pantalon-winchester-hopkins-navy-890866.jpg" alt="Pantalon Winchester Navy">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/denism/pantalon-wesson-lancaster-turquoise-848222.webp" alt="Pantalon Wesson Turquoise">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
+
+            <div class="card2">
+                <img src="./images/collection/denism/wesson-craig-green-257830.jpg" alt="Wesson Craig Green">
+                <p>8.000F</p>
+                <a href="commende.html"><button>acheter</button></a>
+            </div>
         </div>
-     </section>
+    </section>
 
-     <footer>
+    <footer>
         <div class="logo">
             <a href=""><i class="fa-brands fa-telegram"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/abnx27?igsh=MXV6bHh3MXNxcWRudw=="><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100082044739147&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
-    
+
         <div class="txt2">
             <h2>Inscrivez-vous et économisez</h2>
-            <p>Soyez le premier à connaître nos nouveautés et <br> meilleures offres. Nous n'enverrons pas plus de 2 <br> courriels par mois.</p>
+            <p>Soyez le premier à connaître nos nouveautés et meilleures offres. Nous n'enverrons pas plus de 2 courriels par mois.</p>
         </div>
         <div class="txt3">
             <h3>Inscrivez-vous à un compte <a href="formulaire.html"><i class="fa-solid fa-user"></i></a></h3>
@@ -293,8 +127,7 @@ button{
                 <li>BLOG</li>
             </ul>
         </div>
-      </footer>
-
+    </footer>
 
     <script src="script.js"></script>
 </body>
